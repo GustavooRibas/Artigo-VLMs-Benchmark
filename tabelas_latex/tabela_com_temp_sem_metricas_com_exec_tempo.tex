@@ -1,0 +1,59 @@
+% Certifique-se de ter \usepackage{booktabs} e \usepackage{multirow} no seu preâmbulo LaTeX
+\begin{table}[htbp]
+  \centering
+  \caption{Desempenho dos Modelos VLM por Temperatura e Tempo de Execução}
+  \label{tab:vlm_performance_report_com_temp_sem_metricas}
+  \
+  \begin{tabular}{lcc}
+    \textbf{Modelo} & \textbf{Temp.} & \textbf{Tempo Exec. (s)} \\
+    \midrule
+    \multirow{3}{*}{\textbf{gemini-2.0-flash}} & 0.00 & 284.75 \\
+     & 0.50 & 284.47 \\
+     & 1.00 & 324.48 \\
+    \midrule
+    \multirow{3}{*}{\textbf{gemini-2.0-flash-lite}} & 0.00 & 345.68 \\
+     & 0.50 & 327.73 \\
+     & 1.00 & 390.74 \\
+    \midrule
+    \multirow{3}{*}{\textbf{gemini-2.5-flash}} & 0.00 & 1321.98 \\
+     & 0.50 & 1287.55 \\
+     & 1.00 & 1377.54 \\
+    \midrule
+    \multirow{3}{*}{\textbf{gemini-2.5-pro}} & 0.00 & 2174.68 \\
+     & 0.50 & 2220.29 \\
+     & 1.00 & 2319.11 \\
+    \midrule
+    \multirow{3}{*}{\textbf{gemma3:12b}} & 0.00 & 709.29 \\
+     & 0.50 & 523.59 \\
+     & 1.00 & 527.96 \\
+    \midrule
+    \multirow{3}{*}{\textbf{gemma3:27b}} & 0.00 & 773.66 \\
+     & 0.50 & 775.61 \\
+     & 1.00 & 779.52 \\
+    \midrule
+    \multirow{3}{*}{\textbf{gemma3:4b}} & 0.00 & 375.71 \\
+     & 0.50 & 379.36 \\
+     & 1.00 & 374.25 \\
+    \midrule
+    \multirow{3}{*}{\textbf{llava:13b}} & 0.00 & 402.00 \\
+     & 0.50 & 390.39 \\
+     & 1.00 & 365.74 \\
+    \midrule
+    \multirow{3}{*}{\textbf{llava:7b}} & 0.00 & 232.75 \\
+     & 0.50 & 240.97 \\
+     & 1.00 & 254.75 \\
+    \midrule
+    \multirow{3}{*}{\textbf{qwen2.5:14b}} & 0.00 & 542.72 \\
+     & 0.50 & 554.28 \\
+     & 1.00 & 572.53 \\
+    \midrule
+    \multirow{3}{*}{\textbf{qwen2.5:32b}} & 0.00 & 941.36 \\
+     & 0.50 & 915.72 \\
+     & 1.00 & 892.31 \\
+    \midrule
+    \multirow{3}{*}{\textbf{qwen2.5:7b}} & 0.00 & 258.87 \\
+     & 0.50 & 273.56 \\
+     & 1.00 & 292.71 \\
+    \bottomrule
+  \end{tabular}
+\end{table}

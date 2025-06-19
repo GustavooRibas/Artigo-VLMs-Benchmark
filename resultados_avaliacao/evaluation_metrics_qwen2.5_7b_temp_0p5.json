@@ -1,0 +1,907 @@
+{
+  "metadata_avaliacao": {
+    "timestamp_avaliacao": "2025-06-19T15:44:03.074928+00:00",
+    "arquivo_resultados_gerados_avaliado": "generation_results.json",
+    "dataset_ground_truth_usado": "benchmark_50_anotacao_ollama.csv",
+    "modelo_avaliado": "qwen2.5:7b",
+    "temperatura": 0.5,
+    "latencia_total_resposta_modelo_s": 273.562534,
+    "total_itens_avaliados": 50,
+    "total_categorias_com_media_calculada": 0
+  },
+  "Metricas_Agregadas_Por_Categoria": {
+    "Estrutura": {
+      "accuracy": 0.98,
+      "precision_weighted": 1.0,
+      "recall_weighted": 0.98,
+      "f1_score_weighted": 0.98989898989899,
+      "labels_used_for_metrics": [
+        "adobe",
+        "alvenaria",
+        "concreto",
+        "madeira tratada",
+        "metálica",
+        "mista",
+        "na",
+        "na_falha_geracao_ou_parse",
+        "na_item_invalido_ou_pulado",
+        "rudimentar",
+        "taipa"
+      ],
+      "metrics_per_class": {
+        "adobe": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "alvenaria": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "concreto": {
+          "precision": 1.0,
+          "recall": 0.98,
+          "f1-score": 0.98989898989899,
+          "support_ground_truth": 50,
+          "support_predicted": 49
+        },
+        "madeira tratada": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "metálica": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "mista": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "na": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "na_falha_geracao_ou_parse": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 1
+        },
+        "na_item_invalido_ou_pulado": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "rudimentar": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "taipa": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        }
+      }
+    },
+    "Esquadrias": {
+      "accuracy": 0.88,
+      "precision_weighted": 0.8081632653061225,
+      "recall_weighted": 0.88,
+      "f1_score_weighted": 0.8425531914893617,
+      "labels_used_for_metrics": [
+        "alumínio",
+        "especial",
+        "ferro",
+        "madeira",
+        "na",
+        "na_falha_geracao_ou_parse",
+        "na_item_invalido_ou_pulado",
+        "rústica",
+        "sem"
+      ],
+      "metrics_per_class": {
+        "alumínio": {
+          "precision": 0.8979591836734694,
+          "recall": 0.9777777777777777,
+          "f1-score": 0.9361702127659575,
+          "support_ground_truth": 45,
+          "support_predicted": 49
+        },
+        "especial": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "ferro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 5,
+          "support_predicted": 0
+        },
+        "madeira": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "na": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "na_falha_geracao_ou_parse": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 1
+        },
+        "na_item_invalido_ou_pulado": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "rústica": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "sem": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        }
+      }
+    },
+    "Piso": {
+      "accuracy": 0.42,
+      "precision_weighted": 0.19659574468085103,
+      "recall_weighted": 0.42,
+      "f1_score_weighted": 0.26782608695652177,
+      "labels_used_for_metrics": [
+        "cerâmica",
+        "cimento",
+        "especial",
+        "na",
+        "na_falha_geracao_ou_parse",
+        "na_item_invalido_ou_pulado",
+        "porcelanato",
+        "taco",
+        "terra",
+        "tijolo"
+      ],
+      "metrics_per_class": {
+        "cerâmica": {
+          "precision": 0.44680851063829785,
+          "recall": 0.9545454545454546,
+          "f1-score": 0.6086956521739131,
+          "support_ground_truth": 22,
+          "support_predicted": 47
+        },
+        "cimento": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "especial": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 22,
+          "support_predicted": 0
+        },
+        "na": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "na_falha_geracao_ou_parse": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 1
+        },
+        "na_item_invalido_ou_pulado": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "porcelanato": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 6,
+          "support_predicted": 0
+        },
+        "taco": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 1
+        },
+        "terra": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "tijolo": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 1
+        }
+      }
+    },
+    "Forro": {
+      "accuracy": 0.38,
+      "precision_weighted": 0.893,
+      "recall_weighted": 0.38,
+      "f1_score_weighted": 0.533134328358209,
+      "labels_used_for_metrics": [
+        "especial",
+        "gesso simples",
+        "laje",
+        "madeira",
+        "na",
+        "na_falha_geracao_ou_parse",
+        "na_item_invalido_ou_pulado",
+        "pvc",
+        "sem"
+      ],
+      "metrics_per_class": {
+        "especial": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 3,
+          "support_predicted": 0
+        },
+        "gesso simples": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "laje": {
+          "precision": 0.95,
+          "recall": 0.40425531914893614,
+          "f1-score": 0.5671641791044776,
+          "support_ground_truth": 47,
+          "support_predicted": 20
+        },
+        "madeira": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 10
+        },
+        "na": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "na_falha_geracao_ou_parse": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 1
+        },
+        "na_item_invalido_ou_pulado": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "pvc": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "sem": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        }
+      }
+    },
+    "Instalacao_Eletrica": {
+      "accuracy": 0.9,
+      "precision_weighted": 1.0,
+      "recall_weighted": 0.9,
+      "f1_score_weighted": 0.9473684210526315,
+      "labels_used_for_metrics": [
+        "embutida",
+        "externa",
+        "na",
+        "na_falha_geracao_ou_parse",
+        "na_item_invalido_ou_pulado",
+        "sem",
+        "semi embutida"
+      ],
+      "metrics_per_class": {
+        "embutida": {
+          "precision": 1.0,
+          "recall": 0.9,
+          "f1-score": 0.9473684210526315,
+          "support_ground_truth": 50,
+          "support_predicted": 45
+        },
+        "externa": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "na": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "na_falha_geracao_ou_parse": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 1
+        },
+        "na_item_invalido_ou_pulado": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "sem": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "semi embutida": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 2
+        }
+      }
+    },
+    "Instalacao_Sanitaria": {
+      "accuracy": 0.0,
+      "precision_weighted": 0.0,
+      "recall_weighted": 0.0,
+      "f1_score_weighted": 0.0,
+      "labels_used_for_metrics": [
+        "completa",
+        "externa",
+        "interna",
+        "mais de uma",
+        "na",
+        "na_falha_geracao_ou_parse",
+        "na_item_invalido_ou_pulado",
+        "sem"
+      ],
+      "metrics_per_class": {
+        "completa": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 49
+        },
+        "externa": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "interna": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "mais de uma": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 50,
+          "support_predicted": 0
+        },
+        "na": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "na_falha_geracao_ou_parse": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 1
+        },
+        "na_item_invalido_ou_pulado": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "sem": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        }
+      }
+    },
+    "Revestimento_Interno": {
+      "accuracy": 0.06,
+      "precision_weighted": 0.848,
+      "recall_weighted": 0.06,
+      "f1_score_weighted": 0.0996124031007752,
+      "labels_used_for_metrics": [
+        "especial",
+        "massa",
+        "material cerâmico",
+        "na",
+        "na_falha_geracao_ou_parse",
+        "na_item_invalido_ou_pulado",
+        "reboco",
+        "sem"
+      ],
+      "metrics_per_class": {
+        "especial": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 2,
+          "support_predicted": 0
+        },
+        "massa": {
+          "precision": 1.0,
+          "recall": 0.04878048780487805,
+          "f1-score": 0.09302325581395349,
+          "support_ground_truth": 41,
+          "support_predicted": 2
+        },
+        "material cerâmico": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 42
+        },
+        "na": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "na_falha_geracao_ou_parse": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 1
+        },
+        "na_item_invalido_ou_pulado": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "reboco": {
+          "precision": 0.2,
+          "recall": 0.14285714285714285,
+          "f1-score": 0.16666666666666666,
+          "support_ground_truth": 7,
+          "support_predicted": 5
+        },
+        "sem": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        }
+      }
+    },
+    "Acabamento_Interno": {
+      "accuracy": 0.6,
+      "precision_weighted": 0.8181818181818181,
+      "recall_weighted": 0.6,
+      "f1_score_weighted": 0.6923076923076924,
+      "labels_used_for_metrics": [
+        "caiação",
+        "especial",
+        "na",
+        "na_falha_geracao_ou_parse",
+        "na_item_invalido_ou_pulado",
+        "pintura lavável",
+        "pintura simples",
+        "sem"
+      ],
+      "metrics_per_class": {
+        "caiação": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "especial": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 5,
+          "support_predicted": 0
+        },
+        "na": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "na_falha_geracao_ou_parse": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 1
+        },
+        "na_item_invalido_ou_pulado": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "pintura lavável": {
+          "precision": 0.9090909090909091,
+          "recall": 0.6666666666666666,
+          "f1-score": 0.7692307692307693,
+          "support_ground_truth": 45,
+          "support_predicted": 33
+        },
+        "pintura simples": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 16
+        },
+        "sem": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        }
+      }
+    },
+    "Revestimento_Externo": {
+      "accuracy": 0.16,
+      "precision_weighted": 0.7288888888888888,
+      "recall_weighted": 0.16,
+      "f1_score_weighted": 0.22025974025974024,
+      "labels_used_for_metrics": [
+        "especial",
+        "massa",
+        "material cerâmico",
+        "na",
+        "na_falha_geracao_ou_parse",
+        "na_item_invalido_ou_pulado",
+        "reboco",
+        "sem"
+      ],
+      "metrics_per_class": {
+        "especial": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 2,
+          "support_predicted": 0
+        },
+        "massa": {
+          "precision": 0.8571428571428571,
+          "recall": 0.14285714285714285,
+          "f1-score": 0.24489795918367346,
+          "support_ground_truth": 42,
+          "support_predicted": 7
+        },
+        "material cerâmico": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 6
+        },
+        "na": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "na_falha_geracao_ou_parse": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 1
+        },
+        "na_item_invalido_ou_pulado": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "reboco": {
+          "precision": 0.07407407407407407,
+          "recall": 0.3333333333333333,
+          "f1-score": 0.12121212121212122,
+          "support_ground_truth": 6,
+          "support_predicted": 27
+        },
+        "sem": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 9
+        }
+      }
+    },
+    "Acabamento_Externo": {
+      "accuracy": 0.18,
+      "precision_weighted": 0.94,
+      "recall_weighted": 0.18,
+      "f1_score_weighted": 0.30214285714285716,
+      "labels_used_for_metrics": [
+        "caiação",
+        "especial",
+        "na",
+        "na_falha_geracao_ou_parse",
+        "na_item_invalido_ou_pulado",
+        "pintura lavável",
+        "pintura simples",
+        "sem"
+      ],
+      "metrics_per_class": {
+        "caiação": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "especial": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 3,
+          "support_predicted": 0
+        },
+        "na": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "na_falha_geracao_ou_parse": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 1
+        },
+        "na_item_invalido_ou_pulado": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "pintura lavável": {
+          "precision": 1.0,
+          "recall": 0.19148936170212766,
+          "f1-score": 0.32142857142857145,
+          "support_ground_truth": 47,
+          "support_predicted": 9
+        },
+        "pintura simples": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 40
+        },
+        "sem": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        }
+      }
+    },
+    "Cobertura": {
+      "accuracy": 0.46,
+      "precision_weighted": 1.0,
+      "recall_weighted": 0.46,
+      "f1_score_weighted": 0.6301369863013698,
+      "labels_used_for_metrics": [
+        "alumínio",
+        "especial",
+        "fibrocimento",
+        "laje",
+        "na",
+        "na_falha_geracao_ou_parse",
+        "na_item_invalido_ou_pulado",
+        "palha",
+        "sem",
+        "telha de barro",
+        "zinco"
+      ],
+      "metrics_per_class": {
+        "alumínio": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "especial": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "fibrocimento": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 26
+        },
+        "laje": {
+          "precision": 1.0,
+          "recall": 0.46,
+          "f1-score": 0.6301369863013698,
+          "support_ground_truth": 50,
+          "support_predicted": 23
+        },
+        "na": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "na_falha_geracao_ou_parse": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 1
+        },
+        "na_item_invalido_ou_pulado": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "palha": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "sem": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "telha de barro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        },
+        "zinco": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support_ground_truth": 0,
+          "support_predicted": 0
+        }
+      }
+    },
+    "Metricas_Medias_Gerais_Do_Modelo_qwen2.5_7b": {
+      "accuracy_qwen2.5_7b": 0.4563636363636364,
+      "f1_score_weighted_qwen2.5_7b": 0.5022946088061953,
+      "precision_weighted_qwen2.5_7b": 0.7484390651870619,
+      "recall_weighted_qwen2.5_7b": 0.4563636363636364,
+      "num_categories_in_qwen2.5_7b": 11
+    }
+  }
+}

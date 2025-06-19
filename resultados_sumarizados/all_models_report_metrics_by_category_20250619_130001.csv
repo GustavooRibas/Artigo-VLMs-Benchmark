@@ -1,0 +1,133 @@
+Modelo,Temperatura,Categoria,Accuracy,F1-Score,Precision,Recall
+gemini-2.0-flash-lite,0,Estrutura,0.98,0.9899,1,0.98
+gemini-2.0-flash-lite,0,Esquadrias,0.84,0.8217,0.8043,0.84
+gemini-2.0-flash-lite,0,Piso,0.64,0.6349,0.7083,0.64
+gemini-2.0-flash-lite,0,Forro,0.44,0.5994,0.94,0.44
+gemini-2.0-flash-lite,0,Instalação Elétrica,1,1,1,1
+gemini-2.0-flash-lite,0,Instalação Sanitária,0,0,0,0
+gemini-2.0-flash-lite,0,Revestimento Interno,0.58,0.6177,0.6606,0.58
+gemini-2.0-flash-lite,0,Acabamento Interno,0.74,0.7655,0.7929,0.74
+gemini-2.0-flash-lite,0,Revestimento Externo,0.7,0.7408,0.794,0.7
+gemini-2.0-flash-lite,0,Acabamento Externo,0.04,0.0767,0.94,0.04
+gemini-2.0-flash-lite,0,Cobertura,0.92,0.9583,1,0.92
+gemini-2.0-flash,0,Estrutura,0.94,0.9691,1,0.94
+gemini-2.0-flash,0,Esquadrias,0.78,0.7888,0.7977,0.78
+gemini-2.0-flash,0,Piso,0.82,0.8207,0.8272,0.82
+gemini-2.0-flash,0,Forro,0.66,0.769,0.955,0.66
+gemini-2.0-flash,0,Instalação Elétrica,1,1,1,1
+gemini-2.0-flash,0,Instalação Sanitária,0,0,0,0
+gemini-2.0-flash,0,Revestimento Interno,0.8,0.8044,0.8184,0.8
+gemini-2.0-flash,0,Acabamento Interno,0.74,0.7655,0.7929,0.74
+gemini-2.0-flash,0,Revestimento Externo,0.26,0.3199,0.7738,0.26
+gemini-2.0-flash,0,Acabamento Externo,0.34,0.4917,0.8878,0.34
+gemini-2.0-flash,0,Cobertura,0.94,0.9691,1,0.94
+gemini-2.5-flash,1,Estrutura,0.98,0.9899,1,0.98
+gemini-2.5-flash,1,Esquadrias,0.84,0.8217,0.8043,0.84
+gemini-2.5-flash,1,Piso,0.78,0.7614,0.8421,0.78
+gemini-2.5-flash,1,Forro,0.92,0.9008,0.8824,0.92
+gemini-2.5-flash,1,Instalação Elétrica,1,1,1,1
+gemini-2.5-flash,1,Instalação Sanitária,0.52,0.6842,1,0.52
+gemini-2.5-flash,1,Revestimento Interno,0.28,0.3921,0.7187,0.28
+gemini-2.5-flash,1,Acabamento Interno,0.84,0.84,0.84,0.84
+gemini-2.5-flash,1,Revestimento Externo,0.18,0.2367,0.8571,0.18
+gemini-2.5-flash,1,Acabamento Externo,0.62,0.7285,0.883,0.62
+gemini-2.5-flash,1,Cobertura,0.96,0.9796,1,0.96
+gemini-2.5-pro,0.5,Estrutura,0.98,0.9899,1,0.98
+gemini-2.5-pro,0.5,Esquadrias,0.78,0.8069,0.8357,0.78
+gemini-2.5-pro,0.5,Piso,0.76,0.7362,0.832,0.76
+gemini-2.5-pro,0.5,Forro,0.84,0.8745,0.9304,0.84
+gemini-2.5-pro,0.5,Instalação Elétrica,1,1,1,1
+gemini-2.5-pro,0.5,Instalação Sanitária,0.72,0.8372,1,0.72
+gemini-2.5-pro,0.5,Revestimento Interno,0.3,0.3926,0.7641,0.3
+gemini-2.5-pro,0.5,Acabamento Interno,0.78,0.8029,0.8286,0.78
+gemini-2.5-pro,0.5,Revestimento Externo,0.26,0.368,0.7374,0.26
+gemini-2.5-pro,0.5,Acabamento Externo,0.6,0.7214,0.9187,0.6
+gemini-2.5-pro,0.5,Cobertura,0.9,0.9474,1,0.9
+gemma3_12b,0.5,Estrutura,1,1,1,1
+gemma3_12b,0.5,Esquadrias,0.88,0.8426,0.8082,0.88
+gemma3_12b,0.5,Piso,0.1,0.1189,0.1467,0.1
+gemma3_12b,0.5,Forro,0.94,0.9109,0.8836,0.94
+gemma3_12b,0.5,Instalação Elétrica,0.96,0.9796,1,0.96
+gemma3_12b,0.5,Instalação Sanitária,0.34,0.5075,1,0.34
+gemma3_12b,0.5,Revestimento Interno,0.14,0.2343,0.7175,0.14
+gemma3_12b,0.5,Acabamento Interno,0.9,0.8526,0.81,0.9
+gemma3_12b,0.5,Revestimento Externo,0.1,0.0235,0.0133,0.1
+gemma3_12b,0.5,Acabamento Externo,0.34,0.4842,0.8411,0.34
+gemma3_12b,0.5,Cobertura,1,1,1,1
+gemma3_27b,0,Estrutura,1,1,1,1
+gemma3_27b,0,Esquadrias,0.84,0.8494,0.8591,0.84
+gemma3_27b,0,Piso,0.44,0.3503,0.2976,0.44
+gemma3_27b,0,Forro,0.94,0.9109,0.8836,0.94
+gemma3_27b,0,Instalação Elétrica,1,1,1,1
+gemma3_27b,0,Instalação Sanitária,0.28,0.4375,1,0.28
+gemma3_27b,0,Revestimento Interno,0.52,0.6091,0.7352,0.52
+gemma3_27b,0,Acabamento Interno,0.72,0.7535,0.7902,0.72
+gemma3_27b,0,Revestimento Externo,0.12,0.0626,0.8533,0.12
+gemma3_27b,0,Acabamento Externo,0.04,0.0767,0.94,0.04
+gemma3_27b,0,Cobertura,1,1,1,1
+gemma3_4b,0.5,Estrutura,1,1,1,1
+gemma3_4b,0.5,Esquadrias,0,0,0,0
+gemma3_4b,0.5,Piso,0.22,0.2185,0.2171,0.22
+gemma3_4b,0.5,Forro,0.44,0.5909,0.8991,0.44
+gemma3_4b,0.5,Instalação Elétrica,1,1,1,1
+gemma3_4b,0.5,Instalação Sanitária,0.02,0.0392,1,0.02
+gemma3_4b,0.5,Revestimento Interno,0.64,0.6643,0.6905,0.64
+gemma3_4b,0.5,Acabamento Interno,0.9,0.8617,0.8265,0.9
+gemma3_4b,0.5,Revestimento Externo,0,0,0,0
+gemma3_4b,0.5,Acabamento Externo,0.02,0.0392,0.94,0.02
+gemma3_4b,0.5,Cobertura,1,1,1,1
+llava_13b,0,Estrutura,1,1,1,1
+llava_13b,0,Esquadrias,0.9,0.8526,0.81,0.9
+llava_13b,0,Piso,0.12,0.0257,0.0144,0.12
+llava_13b,0,Forro,0,0,0,0
+llava_13b,0,Instalação Elétrica,1,1,1,1
+llava_13b,0,Instalação Sanitária,0,0,0,0
+llava_13b,0,Revestimento Interno,0.04,0.0763,0.82,0.04
+llava_13b,0,Acabamento Interno,0.02,0.0391,0.9,0.02
+llava_13b,0,Revestimento Externo,0,0,0,0
+llava_13b,0,Acabamento Externo,0,0,0,0
+llava_13b,0,Cobertura,1,1,1,1
+llava_7b,0,Estrutura,1,1,1,1
+llava_7b,0,Esquadrias,0.9,0.8526,0.81,0.9
+llava_7b,0,Piso,0.12,0.0257,0.0144,0.12
+llava_7b,0,Forro,0,0,0,0
+llava_7b,0,Instalação Elétrica,1,1,1,1
+llava_7b,0,Instalação Sanitária,0,0,0,0
+llava_7b,0,Revestimento Interno,0.82,0.7389,0.6724,0.82
+llava_7b,0,Acabamento Interno,0.9,0.8526,0.81,0.9
+llava_7b,0,Revestimento Externo,0.12,0.0257,0.0144,0.12
+llava_7b,0,Acabamento Externo,0,0,0,0
+llava_7b,0,Cobertura,1,1,1,1
+qwen2.5_14b,0.5,Estrutura,1,1,1,1
+qwen2.5_14b,0.5,Esquadrias,0.9,0.8526,0.81,0.9
+qwen2.5_14b,0.5,Piso,0.44,0.2689,0.1936,0.44
+qwen2.5_14b,0.5,Forro,0.94,0.9109,0.8836,0.94
+qwen2.5_14b,0.5,Instalação Elétrica,0.08,0.1481,1,0.08
+qwen2.5_14b,0.5,Instalação Sanitária,0,0,0,0
+qwen2.5_14b,0.5,Revestimento Interno,0,0,0,0
+qwen2.5_14b,0.5,Acabamento Interno,0.9,0.8526,0.81,0.9
+qwen2.5_14b,0.5,Revestimento Externo,0.82,0.7569,0.7029,0.82
+qwen2.5_14b,0.5,Acabamento Externo,0.02,0.0392,0.94,0.02
+qwen2.5_14b,0.5,Cobertura,1,1,1,1
+qwen2.5_32b,0.5,Estrutura,0.8,0.8889,1,0.8
+qwen2.5_32b,0.5,Esquadrias,0.74,0.7655,0.7929,0.74
+qwen2.5_32b,0.5,Piso,0.36,0.2475,0.1886,0.36
+qwen2.5_32b,0.5,Forro,0.74,0.7995,0.8695,0.74
+qwen2.5_32b,0.5,Instalação Elétrica,0.28,0.4375,1,0.28
+qwen2.5_32b,0.5,Instalação Sanitária,0,0,0,0
+qwen2.5_32b,0.5,Revestimento Interno,0.02,0.039,0.82,0.02
+qwen2.5_32b,0.5,Acabamento Interno,0.7,0.759,0.8289,0.7
+qwen2.5_32b,0.5,Revestimento Externo,0.68,0.6966,0.714,0.68
+qwen2.5_32b,0.5,Acabamento Externo,0.06,0.1128,0.94,0.06
+qwen2.5_32b,0.5,Cobertura,0.8,0.8889,1,0.8
+qwen2.5_7b,0.5,Estrutura,0.98,0.9899,1,0.98
+qwen2.5_7b,0.5,Esquadrias,0.88,0.8426,0.8082,0.88
+qwen2.5_7b,0.5,Piso,0.42,0.2678,0.1966,0.42
+qwen2.5_7b,0.5,Forro,0.38,0.5331,0.893,0.38
+qwen2.5_7b,0.5,Instalação Elétrica,0.9,0.9474,1,0.9
+qwen2.5_7b,0.5,Instalação Sanitária,0,0,0,0
+qwen2.5_7b,0.5,Revestimento Interno,0.06,0.0996,0.848,0.06
+qwen2.5_7b,0.5,Acabamento Interno,0.6,0.6923,0.8182,0.6
+qwen2.5_7b,0.5,Revestimento Externo,0.16,0.2203,0.7289,0.16
+qwen2.5_7b,0.5,Acabamento Externo,0.18,0.3021,0.94,0.18
+qwen2.5_7b,0.5,Cobertura,0.46,0.6301,1,0.46

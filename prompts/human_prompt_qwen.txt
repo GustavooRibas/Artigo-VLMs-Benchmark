@@ -1,0 +1,63 @@
+Sua tarefa é analisar as imagens de um imóvel e retornar **UM ÚNICO OBJETO JSON VÁLIDO E COMPLETO**. Sua resposta deve conter **APENAS** este objeto JSON.
+
+Siga TODAS as regras abaixo com MÁXIMA PRECISÃO:
+
+1.  **Fonte de Dados para Classificação:** Para cada campo de característica no JSON, utilize **EXCLUSIVAMENTE** as opções de valores fornecidas no seu prompt de sistema.
+
+2.  **Estrutura Obrigatória do JSON de Saída:**
+    ```json
+    {
+        "Estrutura": "VALOR_DA_LISTA_OU_NA",
+        "Esquadrias": "VALOR_DA_LISTA_OU_NA",
+        "Piso": "VALOR_DA_LISTA_OU_NA",
+        "Forro": "VALOR_DA_LISTA_OU_NA",
+        "Instalação Elétrica": "VALOR_DA_LISTA_OU_NA",
+        "Instalação Sanitária": "VALOR_DA_LISTA_OU_NA",
+        "Revestimento Interno": "VALOR_DA_LISTA_OU_NA",
+        "Acabamento Interno": "VALOR_DA_LISTA_OU_NA",
+        "Revestimento Externo": "VALOR_DA_LISTA_OU_NA",
+        "Acabamento Externo": "VALOR_DA_LISTA_OU_NA",
+        "Cobertura": "VALOR_DA_LISTA_OU_NA",
+        "Benfeitorias": ["item_visivel_1", "item_visivel_2", ...],
+        "Tipo de Imóvel": "VALOR_DA_LISTA_OU_NA",
+        "Explicacao": "String única. Para CADA uma das 11 primeiras classificações, forneça a 'Evidência Visual' seguida da 'Classificação'. Ex: 'Estrutura: [Evidência Visual: Vigas e pilares robustos de concreto aparente.] Classificação: Concreto. Esquadrias: [Evidência Visual: Perfis metálicos brancos nas janelas.] Classificação: Alumínio. ...'",
+        "Descricao": "String única. Descrição geral e objetiva do imóvel e seu entorno (50-100 palavras), incluindo estado de conservação."
+    }
+    ```
+
+3.  **Regras de Classificação:**
+    a.  **Incerteza:** Se não for possível identificar, use "NA".
+    b.  **Inferências:**
+        -   Se `Cobertura` == "Laje" -> `Estrutura` **DEVE** ser "Concreto".
+        -   Se `Cobertura` == "Laje" -> `Forro` **DEVE** ser "Laje".
+    c.  **Instalação Elétrica:** Observe fiação, conduítes, tomadas.
+        -   **Embutida:** Dentro das paredes.
+        -   **Externa:** Sobre as paredes.
+        -   **Semi Embutida:** Misto.
+    d.  **Instalação Sanitária (Fluxo de Decisão):**
+        1.  **Imagens inadequadas?** -> "NA".
+        2.  **Nenhum sinal de banheiro/canos?** -> "Sem".
+        3.  **Mais de um banheiro visível?** -> "Mais de uma".
+        4.  **Apenas instalação externa visível?** -> "Externa".
+        5.  **UM banheiro interno com vaso, pia E chuveiro?** -> "Completa".
+        6.  **Caso contrário (ex: lavabo, incompleto):** -> "Interna".
+    e.  **Revestimento (Interno/Externo):**
+        -   **Massa:** Parede lisa para pintura.
+        -   **Reboco:** Argamassa áspera.
+        -   **Material Cerâmico:** Azulejos, pastilhas.
+        -   **Sem:** Tijolo aparente.
+    f.  **Acabamento Externo:**
+        -   **Sem:** Parede sem pintura (apenas reboco, etc.).
+        -   **Caiação:** Pintura à base de cal.
+        -   **Pintura Simples:** Tinta fosca, comum.
+        -   **Pintura Lavável:** Tinta com brilho leve (acetinado) ou textura.
+    g.  **Acabamento Interno:** Siga a mesma lógica do Acabamento Externo para pinturas.
+    h.  **Critérios para "Especial":** Use apenas para luxo inequívoco (ex: mármore, sancas complexas, vidros BLINDEX).
+    i.  **Benfeitorias:** Liste apenas os itens visíveis da sua lista de opções. Se nenhum, use `[]`.
+    j.  **Explicação e Descrição:** Justifique as classificações em "Explicacao" e resuma o imóvel em "Descricao". Ambos devem ser strings únicas.
+
+4.  **Princípio Fundamental:** Baseie **TODAS** as suas conclusões em evidências visuais explícitas, aplicando as regras de decisão acima.
+
+5.  **Formato da Resposta:** Sua resposta deve ser **APENAS** o objeto JSON, começando com `{` e terminando com `}`.
+
+Analise todas as imagens fornecidas em conjunto e seja meticuloso.

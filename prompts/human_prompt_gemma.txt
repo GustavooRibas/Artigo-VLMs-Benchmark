@@ -1,0 +1,56 @@
+Sua tarefa é analisar as imagens de um imóvel e retornar **UM ÚNICO OBJETO JSON VÁLIDO E COMPLETO**. Sua resposta deve conter **APENAS** este JSON.
+
+Siga estas regras com MÁXIMA PRECISÃO:
+
+1.  **Fonte de Dados:** Para cada campo, utilize **EXCLUSIVAMENTE** as opções de valores fornecidas no seu prompt de sistema.
+2.  **Estrutura JSON:** Preencha a estrutura JSON fornecida abaixo.
+    ```json
+    {
+        "Estrutura": "VALOR_DA_LISTA",
+        "Esquadrias": "VALOR_DA_LISTA",
+        "Piso": "VALOR_DA_LISTA",
+        "Forro": "VALOR_DA_LISTA",
+        "Instalação Elétrica": "VALOR_DA_LISTA",
+        "Instalação Sanitária": "VALOR_DA_LISTA",
+        "Revestimento Interno": "VALOR_DA_LISTA",
+        "Acabamento Interno": "VALOR_DA_LISTA",
+        "Revestimento Externo": "VALOR_DA_LISTA",
+        "Acabamento Externo": "VALOR_DA_LISTA",
+        "Cobertura": "VALOR_DA_LISTA",
+        "Benfeitorias": ["item_visivel_1", ...],
+        "Tipo de Imóvel": "VALOR_DA_LISTA",
+        "Explicacao": "String única com justificativas concisas para cada classificação.",
+        "Descricao": "String única com um resumo geral do imóvel (2-3 frases)."
+    }
+    ```
+
+3.  **Regras de Classificação:**
+    a.  **Incerteza:** Se a identificação de uma característica não for clara, use "NA".
+    b.  **Inferências Lógicas:**
+        -   Se "Cobertura" for "Laje", então "Estrutura" **DEVE** ser "Concreto".
+        -   Se "Cobertura" for "Laje", então "Forro" **DEVE** ser "Laje".
+    c.  **Instalação Elétrica:** Observe fiação, conduítes e tomadas. "Embutida" (dentro das paredes) ou "Externa" (sobre as paredes).
+    d.  **Instalação Sanitária (Siga esta prioridade):**
+        1.  Veja mais de um banheiro? Use "Mais de uma".
+        2.  Veja um banheiro completo (vaso, pia, chuveiro)? Use "Completa".
+        3.  Veja apenas partes de um banheiro interno? Use "Interna".
+        4.  A única instalação visível é externa? Use "Externa".
+        5.  Não há nenhuma evidência de banheiro? Use "Sem".
+        6.  Imagens não permitem avaliar? Use "NA".
+    e.  **Revestimento (Interno/Externo):**
+        -   "Reboco": Argamassa simples.
+        -   "Massa": Superfície lisa para pintura.
+        -   "Material Cerâmico": Azulejos, pastilhas.
+        -   "Sem": Tijolo aparente.
+    f.  **Acabamento (Interno/Externo):**
+        -   "Pintura Lavável": Pintura de alta qualidade, uniforme.
+        -   "Pintura Simples": Pintura básica ou desgastada.
+        -   "Caiação": Pintura à base de cal.
+    g.  **Critérios para "Especial":** Use "Especial" apenas para itens de luxo inequívocos e claramente superiores (ex: mármore raro, sancas de gesso elaboradas, vidros BLINDEX).
+    h.  **Benfeitorias:** Liste apenas os itens da sua lista de opções que são **CLARAMENTE VISÍVEIS**. Se nenhum, use uma lista vazia `[]`.
+
+4.  **Princípio Fundamental:** Baseie **TODAS** as classificações em evidências visuais explícitas, a menos que uma regra de inferência se aplique.
+
+5.  **Formato da Resposta:** Sua resposta deve começar com `{` e terminar com `}`. Sem texto adicional.
+
+Analise todas as imagens em conjunto e seja preciso.

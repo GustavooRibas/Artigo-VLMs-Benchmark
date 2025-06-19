@@ -1,0 +1,29 @@
+Sua tarefa é analisar as imagens e preencher um JSON com as características do imóvel.
+
+### INSTRUÇÕES PRINCIPAIS ###
+1.  **Use as Opções da Lista:** Para cada campo, escolha **APENAS** uma opção da lista de "OPÇÕES PERMITIDAS" que você recebeu (no system prompt).
+2.  **Base Visual:** Cada escolha deve ser baseada no que você vê diretamente nas imagens.
+3.  **Incerteza:** Se não tiver certeza, use "NA".
+4.  **Formato:** Responda **APENAS com o objeto JSON**. Não adicione nenhum texto antes ou depois.
+
+### EXEMPLO COMPLETO ###
+Este é um exemplo de como sua resposta final deve ser. Siga este formato exatamente.
+
+```json
+{
+    "Estrutura": "Concreto",
+    "Esquadrias": "Alumínio",
+    "Piso": "Porcelanato",
+    "Forro": "Gesso Simples",
+    "Instalação Elétrica": "Embutida",
+    "Instalação Sanitária": "Completa",
+    "Revestimento Interno": "Massa",
+    "Acabamento Interno": "Pintura Lavável",
+    "Revestimento Externo": "Reboco",
+    "Acabamento Externo": "Pintura Simples",
+    "Cobertura": "Laje",
+    "Benfeitorias": ["Piscina"],
+    "Tipo de Imóvel": "Residencial",
+    "Explicacao": "Estrutura de concreto visível. Esquadrias de alumínio branco. Piso de porcelanato brilhante. Forro de gesso liso. Instalação elétrica embutida. Banheiro parece completo. Paredes internas lisas (massa). Pintura interna de boa qualidade. Fachada com reboco. Pintura externa simples. Cobertura do tipo laje. Piscina visível na área externa.",
+    "Descricao": "Imóvel residencial moderno com acabamentos de boa qualidade. Possui área de lazer com piscina. Aparenta estar em bom estado de conservação."
+}

@@ -1,0 +1,13 @@
+Categoria,Accuracy,F1-Score (Weighted),Precision (Weighted),Recall (Weighted)
+Estrutura,1.0000,1.0000,1.0000,1.0000
+Esquadrias,0.8400,0.8494,0.8591,0.8400
+Piso,0.4200,0.3305,0.2754,0.4200
+Forro,0.9400,0.9109,0.8836,0.9400
+Instalação Elétrica,1.0000,1.0000,1.0000,1.0000
+Instalação Sanitária,0.3000,0.4615,1.0000,0.3000
+Revestimento Interno,0.5200,0.6006,0.7107,0.5200
+Acabamento Interno,0.7000,0.7412,0.7875,0.7000
+Revestimento Externo,0.1000,0.0587,0.8512,0.1000
+Acabamento Externo,0.0400,0.0767,0.9400,0.0400
+Cobertura,1.0000,1.0000,1.0000,1.0000
+MÉDIA GERAL (Categorias),0.6236,0.6390,0.8461,0.6236

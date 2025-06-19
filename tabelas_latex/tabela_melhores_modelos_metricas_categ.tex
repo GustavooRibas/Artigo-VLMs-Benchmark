@@ -1,0 +1,61 @@
+% Certifique-se de ter \usepackage{booktabs} e \usepackage{multirow} no seu preâmbulo LaTeX
+\begin{table}[htbp]
+  \centering
+  \caption{Comparativo de Desempenho de Modelos VLM por Categoria}
+  \label{tab:vlm_model_category_metrics_final}
+  \
+  \begin{tabular}{llcccc}
+    \textbf{Modelo} & \textbf{Categoria} & \multicolumn{4}{c}{\textbf{Métricas}} \\
+    \midrule
+     &  & \textbf{Accuracy} & \textbf{F1-Score} & \textbf{Precision} & \textbf{Recall} \\
+    \cmidrule(lr){3-6}
+    \multirow{11}{*}{\textbf{gemini-2.5-flash}} & \multirow{1}{*}{Acabamento Externo} & 0.62 & 0.73 & 0.88 & 0.62 \\
+     & \multirow{1}{*}{Acabamento Interno} & 0.84 & 0.84 & 0.84 & 0.84 \\
+     & \multirow{1}{*}{Cobertura} & 0.96 & 0.98 & 1.00 & 0.96 \\
+     & \multirow{1}{*}{Esquadrias} & 0.84 & 0.82 & 0.80 & 0.84 \\
+     & \multirow{1}{*}{Estrutura} & 0.98 & 0.99 & 1.00 & 0.98 \\
+     & \multirow{1}{*}{Forro} & 0.92 & 0.90 & 0.88 & 0.92 \\
+     & \multirow{1}{*}{Instalação Elétrica} & 1.00 & 1.00 & 1.00 & 1.00 \\
+     & \multirow{1}{*}{Instalação Sanitária} & 0.52 & 0.68 & 1.00 & 0.52 \\
+     & \multirow{1}{*}{Piso} & 0.78 & 0.76 & 0.84 & 0.78 \\
+     & \multirow{1}{*}{Revestimento Externo} & 0.18 & 0.24 & 0.86 & 0.18 \\
+     & \multirow{1}{*}{Revestimento Interno} & 0.28 & 0.39 & 0.72 & 0.28 \\
+    \midrule
+    \multirow{11}{*}{\textbf{gemini-2.5-pro}} & \multirow{1}{*}{Acabamento Externo} & 0.60 & 0.72 & 0.92 & 0.60 \\
+     & \multirow{1}{*}{Acabamento Interno} & 0.78 & 0.80 & 0.83 & 0.78 \\
+     & \multirow{1}{*}{Cobertura} & 0.90 & 0.95 & 1.00 & 0.90 \\
+     & \multirow{1}{*}{Esquadrias} & 0.78 & 0.81 & 0.84 & 0.78 \\
+     & \multirow{1}{*}{Estrutura} & 0.98 & 0.99 & 1.00 & 0.98 \\
+     & \multirow{1}{*}{Forro} & 0.84 & 0.87 & 0.93 & 0.84 \\
+     & \multirow{1}{*}{Instalação Elétrica} & 1.00 & 1.00 & 1.00 & 1.00 \\
+     & \multirow{1}{*}{Instalação Sanitária} & 0.72 & 0.84 & 1.00 & 0.72 \\
+     & \multirow{1}{*}{Piso} & 0.76 & 0.74 & 0.83 & 0.76 \\
+     & \multirow{1}{*}{Revestimento Externo} & 0.26 & 0.37 & 0.74 & 0.26 \\
+     & \multirow{1}{*}{Revestimento Interno} & 0.30 & 0.39 & 0.76 & 0.30 \\
+    \midrule
+    \multirow{11}{*}{\textbf{gemma3:27b}} & \multirow{1}{*}{Acabamento Externo} & 0.04 & 0.08 & 0.94 & 0.04 \\
+     & \multirow{1}{*}{Acabamento Interno} & 0.72 & 0.75 & 0.79 & 0.72 \\
+     & \multirow{1}{*}{Cobertura} & 1.00 & 1.00 & 1.00 & 1.00 \\
+     & \multirow{1}{*}{Esquadrias} & 0.84 & 0.85 & 0.86 & 0.84 \\
+     & \multirow{1}{*}{Estrutura} & 1.00 & 1.00 & 1.00 & 1.00 \\
+     & \multirow{1}{*}{Forro} & 0.94 & 0.91 & 0.88 & 0.94 \\
+     & \multirow{1}{*}{Instalação Elétrica} & 1.00 & 1.00 & 1.00 & 1.00 \\
+     & \multirow{1}{*}{Instalação Sanitária} & 0.28 & 0.44 & 1.00 & 0.28 \\
+     & \multirow{1}{*}{Piso} & 0.44 & 0.35 & 0.30 & 0.44 \\
+     & \multirow{1}{*}{Revestimento Externo} & 0.12 & 0.06 & 0.85 & 0.12 \\
+     & \multirow{1}{*}{Revestimento Interno} & 0.52 & 0.61 & 0.74 & 0.52 \\
+    \midrule
+    \multirow{11}{*}{\textbf{qwen2.5:32b}} & \multirow{1}{*}{Acabamento Externo} & 0.06 & 0.11 & 0.94 & 0.06 \\
+     & \multirow{1}{*}{Acabamento Interno} & 0.70 & 0.76 & 0.83 & 0.70 \\
+     & \multirow{1}{*}{Cobertura} & 0.80 & 0.89 & 1.00 & 0.80 \\
+     & \multirow{1}{*}{Esquadrias} & 0.74 & 0.77 & 0.79 & 0.74 \\
+     & \multirow{1}{*}{Estrutura} & 0.80 & 0.89 & 1.00 & 0.80 \\
+     & \multirow{1}{*}{Forro} & 0.74 & 0.80 & 0.87 & 0.74 \\
+     & \multirow{1}{*}{Instalação Elétrica} & 0.28 & 0.44 & 1.00 & 0.28 \\
+     & \multirow{1}{*}{Instalação Sanitária} & 0.00 & 0.00 & 0.00 & 0.00 \\
+     & \multirow{1}{*}{Piso} & 0.36 & 0.25 & 0.19 & 0.36 \\
+     & \multirow{1}{*}{Revestimento Externo} & 0.68 & 0.70 & 0.71 & 0.68 \\
+     & \multirow{1}{*}{Revestimento Interno} & 0.02 & 0.04 & 0.82 & 0.02 \\
+    \bottomrule
+  \end{tabular}
+\end{table}

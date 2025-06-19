@@ -1,0 +1,45 @@
+Modelo,Temperatura,Categoria,Accuracy,F1-Score,Precision,Recall
+gemini-2.5-flash,1,Estrutura,0.98,0.9899,1,0.98
+gemini-2.5-flash,1,Esquadrias,0.84,0.8217,0.8043,0.84
+gemini-2.5-flash,1,Piso,0.78,0.7614,0.8421,0.78
+gemini-2.5-flash,1,Forro,0.92,0.9008,0.8824,0.92
+gemini-2.5-flash,1,Instalação Elétrica,1,1,1,1
+gemini-2.5-flash,1,Instalação Sanitária,0.52,0.6842,1,0.52
+gemini-2.5-flash,1,Revestimento Interno,0.28,0.3921,0.7187,0.28
+gemini-2.5-flash,1,Acabamento Interno,0.84,0.84,0.84,0.84
+gemini-2.5-flash,1,Revestimento Externo,0.18,0.2367,0.8571,0.18
+gemini-2.5-flash,1,Acabamento Externo,0.62,0.7285,0.883,0.62
+gemini-2.5-flash,1,Cobertura,0.96,0.9796,1,0.96
+gemini-2.5-pro,0.5,Estrutura,0.98,0.9899,1,0.98
+gemini-2.5-pro,0.5,Esquadrias,0.78,0.8069,0.8357,0.78
+gemini-2.5-pro,0.5,Piso,0.76,0.7362,0.832,0.76
+gemini-2.5-pro,0.5,Forro,0.84,0.8745,0.9304,0.84
+gemini-2.5-pro,0.5,Instalação Elétrica,1,1,1,1
+gemini-2.5-pro,0.5,Instalação Sanitária,0.72,0.8372,1,0.72
+gemini-2.5-pro,0.5,Revestimento Interno,0.3,0.3926,0.7641,0.3
+gemini-2.5-pro,0.5,Acabamento Interno,0.78,0.8029,0.8286,0.78
+gemini-2.5-pro,0.5,Revestimento Externo,0.26,0.368,0.7374,0.26
+gemini-2.5-pro,0.5,Acabamento Externo,0.6,0.7214,0.9187,0.6
+gemini-2.5-pro,0.5,Cobertura,0.9,0.9474,1,0.9
+gemma3_27b,0,Estrutura,1,1,1,1
+gemma3_27b,0,Esquadrias,0.84,0.8494,0.8591,0.84
+gemma3_27b,0,Piso,0.44,0.3503,0.2976,0.44
+gemma3_27b,0,Forro,0.94,0.9109,0.8836,0.94
+gemma3_27b,0,Instalação Elétrica,1,1,1,1
+gemma3_27b,0,Instalação Sanitária,0.28,0.4375,1,0.28
+gemma3_27b,0,Revestimento Interno,0.52,0.6091,0.7352,0.52
+gemma3_27b,0,Acabamento Interno,0.72,0.7535,0.7902,0.72
+gemma3_27b,0,Revestimento Externo,0.12,0.0626,0.8533,0.12
+gemma3_27b,0,Acabamento Externo,0.04,0.0767,0.94,0.04
+gemma3_27b,0,Cobertura,1,1,1,1
+qwen2.5_32b,0.5,Estrutura,0.8,0.8889,1,0.8
+qwen2.5_32b,0.5,Esquadrias,0.74,0.7655,0.7929,0.74
+qwen2.5_32b,0.5,Piso,0.36,0.2475,0.1886,0.36
+qwen2.5_32b,0.5,Forro,0.74,0.7995,0.8695,0.74
+qwen2.5_32b,0.5,Instalação Elétrica,0.28,0.4375,1,0.28
+qwen2.5_32b,0.5,Instalação Sanitária,0,0,0,0
+qwen2.5_32b,0.5,Revestimento Interno,0.02,0.039,0.82,0.02
+qwen2.5_32b,0.5,Acabamento Interno,0.7,0.759,0.8289,0.7
+qwen2.5_32b,0.5,Revestimento Externo,0.68,0.6966,0.714,0.68
+qwen2.5_32b,0.5,Acabamento Externo,0.06,0.1128,0.94,0.06
+qwen2.5_32b,0.5,Cobertura,0.8,0.8889,1,0.8

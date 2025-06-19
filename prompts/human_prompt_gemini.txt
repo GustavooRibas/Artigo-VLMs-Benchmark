@@ -1,0 +1,60 @@
+Analise CUIDADOSAMENTE e DETALHADAMENTE as imagens fornecidas do imóvel localizado em Goiânia.
+Sua tarefa é retornar **UM ÚNICO OBJETO JSON VÁLIDO E COMPLETO. A SUA RESPOSTA DEVE CONTER APENAS ESTE OBJETO JSON, SEM NENHUM TEXTO, INTRODUÇÃO, CONCLUSÃO OU QUALQUER CARACTERE FORA DO JSON.**
+
+Siga TODAS as regras abaixo com MÁXIMA PRECISÃO:
+
+1.  **Fonte de Dados para Classificação:** Para os campos de características (de "Estrutura" a "Tipo de Imóvel"), você DEVE utilizar EXCLUSIVAMENTE as opções de valores que foram fornecidas na seção "OPÇÕES PERMITIDAS PARA CADA CARACTERÍSTICA" no seu prompt de sistema.
+
+2.  **Estrutura Obrigatória do JSON de Saída:**
+    ```json
+    {
+        "Estrutura": "VALOR_DA_LISTA_DE_OPÇÕES_OU_NA",
+        "Esquadrias": "VALOR_DA_LISTA_DE_OPÇÕES_OU_NA",
+        "Piso": "VALOR_DA_LISTA_DE_OPÇÕES_OU_NA",
+        "Forro": "VALOR_DA_LISTA_DE_OPÇÕES_OU_NA",
+        "Instalação Elétrica": "VALOR_DA_LISTA_DE_OPÇÕES_OU_NA",
+        "Instalação Sanitária": "VALOR_DA_LISTA_DE_OPÇÕES_OU_NA",
+        "Revestimento Interno": "VALOR_DA_LISTA_DE_OPÇÕES_OU_NA",
+        "Acabamento Interno": "VALOR_DA_LISTA_DE_OPÇÕES_OU_NA",
+        "Revestimento Externo": "VALOR_DA_LISTA_DE_OPÇÕES_OU_NA",
+        "Acabamento Externo": "VALOR_DA_LISTA_DE_OPÇÕES_OU_NA",
+        "Cobertura": "VALOR_DA_LISTA_DE_OPÇÕES_OU_NA",
+        "Benfeitorias": ["item_visivel_da_lista_de_opções_1", "item_visivel_da_lista_de_opções_2", ...],
+        "Tipo de Imóvel": "VALOR_DA_LISTA_DE_OPÇÕES_OU_NA",
+        "Explicacao": "String única. Justifique CADA UMA das 11 primeiras classificações (Estrutura a Cobertura) com base em detalhes específicos e observáveis nas imagens. Seja conciso. Exemplo: 'Estrutura: Concreto, inferido pela presença de vigas robustas e laje de cobertura. Esquadrias: Alumínio, identificado pelo perfil metálico e design das janelas. ...'",
+        "Descricao": "String única. Descrição geral e objetiva do imóvel e seu entorno imediato visível nas imagens (entre 50 e 100 palavras). Inclua o estado de conservação aparente e elementos contextuais relevantes (ex: tipo de rua, vegetação próxima, outras construções vizinhas se visíveis)."
+    }
+    ```
+3.  **Regras de Preenchimento Específicas:**
+    a.  **Valores Padrão:** Preencha cada "valor_..." com a opção correspondente da tabela "Características e Pontuações". Se não for possível identificar nas imagens, use "NA".
+    b.  **Inferência Cobertura -> Estrutura:** Se o campo "Cobertura" for classificado como "Laje", OU se as imagens mostrarem uma cobertura que aparenta ser pesada e bem construída (ex: telhado verde, múltiplas telhas de concreto), então o campo "Estrutura" DEVE ser classificado como "Concreto".
+    c.  **Inferência Cobertura -> Forro:** Se o campo "Cobertura" for classificado como "Laje", então o campo "Forro" DEVE OBRIGATORIAMENTE ser classificado também como "Laje". Esta regra tem precedência sobre a observação visual direta do forro se a cobertura for "Laje". Justifique no campo "Explicacao" que o forro foi classificado como "Laje" devido à cobertura ser "Laje".
+    d.  **Classificação de Revestimentos (Interno/Externo):** Para os campos "Revestimento Interno" e "Revestimento Externo", dadas as opções de valores que foram fornecidas na seção "OPÇÕES PERMITIDAS PARA CADA CARACTERÍSTICA", os campos deverão ser classificados entre:
+	-   "Reboco" se a parede for revestida com argamassa de areia, cimento ou cal.
+	-   "Massa" se a parede for revestida de argamssa semelhante ao gesso de calcita.
+	-   "Material Ceramico" se a parede for revestida com composto cerâmico, podendo ser pastilhas, azulejos ou materiais compatíveis.
+	-   "Especial" se o material de revestimento da parede aparentar ser de custo elevado e superior a "Massa".
+    e.  **Classificação de Acabamentos ("Acabamento Interno" e "Acabamento Externo"):**
+        -   Se a pintura aparentar utilizar tinta que permita a lavagem da parede (alta qualidade e uniforme), geralmente, tinta PVA ou acrílica semi brilho, tinta a óleo, esmalte sintético, classifique como "Pintura Lavável".
+        -   Se a pintura parecer básica, desgastada ou de aplicação simples, classifique como "Pintura Simples".
+        -   Se a pintura parecer que foi aplicada com a utilização de cal virgem, classifique como "Caiação".
+        -   Se a pintura parecer que foi aplicada com material de alto custo e superior a "Pintura Lavável", classifique como "Especial".
+    f.  **Classificação de Esquadrias "Especial":** Se forem identificados vidros do tipo BLINDEX (temperados e com logomarca visível) ou esquadrias com materiais/design claramente superiores (ex: PVC com perfis robustos e isolamento acústico, madeira de demolição nobre com design customizado), as "Esquadrias" devem ser classificadas como "Especial".
+    g.  **Classificação de Forro "Especial":** Se o "Forro" apresentar Sanca elaborada, múltiplos níveis com iluminação embutida complexa, for um forro rebaixado com design arquitetônico diferenciado, ou utilizar um material visivelmente de alto custo (ex: madeira nobre trabalhada, painéis acústicos decorativos), classifique-o como "Especial".
+    h.  **Classificação Geral "Especial":** Para outros campos de característica (além dos casos específicos acima), utilize a opção "Especial" SOMENTE se as imagens demonstrarem INEQUIVOCAMENTE que o item é de um padrão luxuoso, customizado, utilizando materiais nobres e/ou tecnologia significativamente superior e mais cara que o usual para Goiânia naquela categoria. O uso de "Especial" deve ser raro e sempre justificado com detalhes específicos no campo "Explicacao".
+    i.  **Benfeitorias:** Liste no array "Benfeitorias" APENAS os itens da seção "Benfeitorias" da tabela "Características e Pontuações" que são CLARAMENTE VISÍVEIS nas imagens fornecidas. Se nenhuma benfeitoria da lista for visível, retorne uma lista vazia: `[]`.
+    j.  **Tipo de Imóvel:** Classifique como "Residencial", "Comercial" ou "Industrial" com base na aparência e características predominantes visíveis nas imagens. Se ambíguo, use "NA".
+    k.  **Campo "Explicacao":** DEVE ser uma string única, limite a aproximadamente 250-300 palavras. NÃO use formato JSON dentro deste campo. Forneça uma justificativa concisa para *cada* uma das 11 primeiras características classificadas, mencionando o que nas imagens levou à sua decisão.
+    l.  **Campo "Descricao":** Limite a aproximadamente 50-100 palavras. Descreva o que é visto de forma geral, incluindo o estado de conservação aparente do imóvel e quaisquer elementos notáveis do entorno (rua, vegetação, vizinhança) visíveis.
+
+4.  **Princípios da Análise:**
+    a.  **Foco no Visível:** TODAS as suas conclusões devem ser estritamente derivadas de evidências visuais explícitas nas imagens fornecidas.
+    b.  **Objetividade:** Descreva APENAS o que é observável. Evite inferências subjetivas não suportadas diretamente pelas imagens, a menos que explicitamente instruído (como na regra 3.b).
+    c.  **Tratamento da Dúvida:** Se, após uma análise detalhada, persistir uma dúvida genuína na classificação de uma característica entre as opções permitidas, ESCOLHA "NA" e, se possível, mencione a natureza da dúvida no campo "Explicacao" para aquela característica.
+
+5.  **Formato Final da Resposta: JSON Exclusivo**
+    a.  Sua resposta DEVE consistir apenas no objeto JSON, começando com `{` e terminando com `}`.
+    b.  NÃO adicione NENHUM prefixo, sufixo, comentário, saudação, ou qualquer outro texto fora do objeto JSON.
+    c.  Assegure a validade do JSON, incluindo o escape correto de caracteres especiais dentro das strings (ex: `\"` para aspas, `\\` para barras invertidas, `\n` para novas linhas literais APENAS se realmente fizerem parte do conteúdo desejado de um campo de texto).
+
+Analise todas as imagens fornecidas em conjunto. Seja meticuloso, preciso e siga todas as instruções à risca.
