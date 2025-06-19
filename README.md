@@ -25,13 +25,16 @@ vlm_benchmark/
 |   └── latex_model_temp_tables.py      # Script para gerar tabelas (Modelo, Temperatura, Tempo de Execução e Métricas) em LaTeX (lê o .csv gerado nos RELATÓRIOS)
 │
 ├── prompts/
-│   ├── system_prompt_gemini.txt       # Prompt de sistema definindo o papel do VLM (Gemini)
 │   ├── human_prompt_gemini.txt        # Prompt humano com as instruções da tarefa (Gemini)
-│   ├── system_prompt.txt              # Prompt de sistema definindo o papel do VLM (Ollama)
-|   └── human_prompt.txt               # Prompt humano com as instruções da tarefa (Ollama)
+│   ├── human_prompt_gemma.txt         # Prompt humano com as instruções da tarefa (Gemma3)
+│   ├── human_prompt_qwen.txt          # Prompt humano com as instruções da tarefa (Qwen2.5)
+│   ├── human_prompt_llava.txt         # Prompt humano com as instruções da tarefa (Llava)
+│   ├── system_prompt_gemini.txt       # Prompt de sistema definindo o papel do VLM (Gemini)
+│   └── system_prompt.txt              # Prompt de sistema definindo o papel do VLM (Ollama)
 │
 ├── data/
-│   ├── benchmark_50_anotacao.csv      # Dataset com ground truth das características dos imóveis
+│   ├── benchmark_50_anotacao_ollama.csv      # Dataset com ground truth das características dos imóveis
+│   ├── benchmark_50_anotacao_gemini.csv      # Dataset com ground truth das características dos imóveis
 │   └── images/
 │       ├── 1_algum_id/                # Subpasta para cada imóvel com suas imagens
 │       │   ├── img1.jpg
@@ -56,11 +59,14 @@ vlm_benchmark/
 ├── resultados_sumarizados/            # Onde os RELATÓRIOS finais são salvos
 |   ├── report_metrics_by_category_TIMESTAMP.csv
 |   └── report_overall_model_averages_TIMESTAMP.csv
+|   └── best_models_report_metrics_by_category_TIMESTAMP.csv
+|   └── all_models_report_metrics_by_category_TIMESTAMP.csv
 |
 └── tabelas_latex/                     # Onde as TABELAS em .tex são salvas
-    ├── tabela_metricas_categ.tex
-    ├── tabela_metricas_temp.tex
-    └── tabela_metricas_seconds.tex
+    ├── tabela_com_temp_com_metricas_sem_exec_tempo.tex # Tabela com Modelos, Temperaturas e Métricas
+    ├── tabela_com_temp_sem_metricas_com_exec_tempo.tex # Tabela com Modelos, Temperaturas e Tempo de Execução
+    └── tabela_melhores_modelos_metricas_categ.tex      # Tabela com os Melhores Modelos, Categorias e Métricas
+    └── tabela_todos_modelos_metricas_categ.tex         # Tabela com Todos Modelos, Categorias e Métricas
 ```
 
 ## Configuração do Ambiente
